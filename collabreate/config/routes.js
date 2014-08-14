@@ -32,6 +32,16 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  'get /auth/login': 'AuthController.login',
+  'get /auth/logout': 'AuthController.logout',
+  'get /auth/register': 'AuthController.register',
+
+  'post /auth/local': 'AuthController.callback',
+  'post /auth/local/:action': 'AuthController.callback',
+
+  'get /auth/:provider': 'AuthController.provider',
+  'get /auth/:provider/callback': 'AuthController.callback',
+
   '/': {
     view: 'homepage'
   }
